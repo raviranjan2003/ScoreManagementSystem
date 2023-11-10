@@ -48,8 +48,8 @@ Follow these instructions to set up the Modular Player Score Management System o
 
 | Method | API Endpoints                           | Request Body                                      | CURL Command                                           |
 |--------|-----------------------------------------|---------------------------------------------------|--------------------------------------------------------|
-| POST   | http://localhost:3000/players           | {"name": "Ravi","country": "IN","score": 200} | ```curl -X POST -H "Content-Type: application/json" -d '{"name": "Ravi","country": "IN","score": 100}' http://localhost:3000/players``` |
-| PUT    | http://localhost:3000/players/:id (id : 654d3cb2309e38e6adb981b9)     | {"name": "Ravi Ranjan","score": 200}               | ```curl -X PUT -H "Content-Type: application/json" -d '{"name": "Ravi Ranjan","score": 100}' http://localhost:3000/players/:id``` |
+| POST   | http://localhost:3000/players           | {"name": "Ravi","country": "IN","score": 200} | ```curl -X POST -H "Content-Type: application/json" -d '{"name": "Ravi","country": "IN","score": 200}' http://localhost:3000/players``` |
+| PUT    | http://localhost:3000/players/:id (id : 654d3cb2309e38e6adb981b9)     | {"name": "Ravi Ranjan","score": 100}               | ```curl -X PUT -H "Content-Type: application/json" -d '{"name": "Ravi Ranjan","score": 100}' http://localhost:3000/players/:id``` |
 | DELETE | http://localhost:3000/players/:id       |                                                   | ```curl -X DELETE http://localhost:3000/players/:id``` |
 | GET    | http://localhost:3000/players           |                                                   | ```curl http://localhost:3000/players```                |
 | GET    | http://localhost:3000/players/rank/:val |                                                   | ```curl http://localhost:3000/players/rank/:val```      |
