@@ -44,7 +44,7 @@ Follow these instructions to set up the Modular Player Score Management System o
 ```
 
 ### 6. You can make requests to below api endpoints.
-##### You can make request in nodejs as well as curl
+##### You can make request using postman as well as curl
 
 | Method | API Endpoints                           | Request Body                                      | CURL Command                                           |
 |--------|-----------------------------------------|---------------------------------------------------|--------------------------------------------------------|
