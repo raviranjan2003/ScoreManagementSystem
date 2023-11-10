@@ -2,31 +2,18 @@ const express = require('express');
 
 const router = express.Router();
 
-router.post('/players', (req, res) => {
-    res.status(200).send("Post request on /players ")
-})
+const playerApis = require("../controllers/playerController");
 
-router.get('/players', (req, res) => {
-    res.status(200).send("Get request on /players ")
-})
+router.post('/players', playerApis.createPlayer);
 
-router.put('/players/:id',(req,res) => {
-    const id = req.params;
-    res.status(200).send(`Put request on /players/${id} `);
-})
+router.get('/players', playerApis.getPlayers);
 
-router.delete('/players/:id',(req,res) => {
-    const id = req.params;
-    res.status(200).send(`Delete request on /players/${id} `);
-})
+router.put('/players/:id', playerApis.updatePlayer);
 
-router.get('/players/rank/:val',(req,res) => {
-    const val = req.params;
-    res.status(200).send(`Get request on /players/${val} `);
-})
+router.delete('/players/:id', playerApis.deletePlayer)
 
-router.get('/players/random',(req,res) => {
-    res.status(200).send(`Get request on /players/random `);
-})
+router.get('/players/rank/:val', playerApis.playerRank)
+
+router.get('/players/random', playerApis.randomPlayer)
 
 module.exports = router;
